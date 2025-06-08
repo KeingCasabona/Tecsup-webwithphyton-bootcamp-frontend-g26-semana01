@@ -68,3 +68,27 @@ a {
     padding-top: 3rem;
     padding-bottom: 12rem;
 }
+
+.hero__title {
+    border: 1px solid blue;
+    width: 720px;
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.hero__text {
+    border: 1px solid orange;
+    width: 500px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.hero__button {
+
+    border: 1px solid red;
+    border-radius: 7rem;
+    min-width: 220px;
+    color: hsl(0, 0%, 100%);
+    padding: 1rem 1.5rem;
+}
