@@ -7,6 +7,14 @@ font-family: "Open Sans", sans-serif;
 
 /*ESTILOS GENERALES*/
 
+* {
+    /* Selector Universal */
+    border: 1px solid chartreuse;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
 html {
     font-size: 14px;
 }
@@ -46,6 +54,7 @@ a {
     /* margin-top: 3rem; */
     /* 0 auto 0 auto*/
     margin: 0 auto;
+    margin-top: 3rem;
 
 
 
@@ -65,8 +74,12 @@ a {
     align-items: center;
     gap: 2rem;
 
-    padding-top: 3rem;
+
     padding-bottom: 12rem;
+}
+
+.hero__image {
+    width: 450px;
 }
 
 .hero__title {
@@ -86,9 +99,12 @@ a {
 
 .hero__button {
 
-    border: 1px solid red;
+    border: none;
     border-radius: 7rem;
     min-width: 220px;
     color: hsl(0, 0%, 100%);
     padding: 1rem 1.5rem;
+
+    /* TODO:Aplicar el degradado del botton */
+    background-color: blue;
 }
