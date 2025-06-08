@@ -6,11 +6,17 @@ font-family: "Open Sans", sans-serif;
 */
 
 /*ESTILOS GENERALES*/
+
+html {
+    font-size: 14px;
+}
+
 body {
 
     background-color: hsl(217, 28%, 15%);
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
+    color: hsl(0, 0%, 100%);
 }
 
 a {
@@ -32,12 +38,12 @@ a {
 
 /* HEADER SECTION */
 .header {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     /*14px * 3=42px*/
-    margin-top: 42px;
+    /* margin-top: 3rem; */
     /* 0 auto 0 auto*/
     margin: 0 auto;
 
