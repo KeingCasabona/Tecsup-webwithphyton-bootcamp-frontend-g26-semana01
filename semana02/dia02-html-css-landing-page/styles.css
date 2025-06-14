@@ -5,6 +5,12 @@ font-family: "Raleway", sans-serif;
 font-family: "Open Sans", sans-serif;
 */
 
+/*
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
 /*ESTILOS GENERALES*/
 
 * {
@@ -32,6 +38,12 @@ a {
     text-decoration: none;
 }
 
+img {
+    /* TODO:Adaptar el ancho de las imagenes a dispositivos moviles */
+    max-width: 100%;
+    height: auto;
+}
+
 /* UTILS */
 .hidden {
     display: none;
@@ -39,6 +51,8 @@ a {
 
 .wrapper {
     width: 1000px;
+
+    width: min(100% - 3rem, 1000px);
 
 
     /* TODO:Adaptar el ancho de la pagina a dispositivos moviles*/
@@ -86,7 +100,8 @@ a {
 
 .hero__title {
     /* border: 1px solid blue; */
-    width: 720px;
+    /* width: 720px; */
+    width: min(100% - 3rem, 720px);
     font-weight: 700;
     font-size: 2.8rem;
     text-align: center;
@@ -94,7 +109,8 @@ a {
 
 .hero__text {
     /* border: 1px solid orange; */
-    width: 500px;
+    /* width: 500px; */
+    width: min(100% - 3rem, 720px);
     font-size: 1.2rem;
     text-align: center;
 }
@@ -109,17 +125,33 @@ a {
 
     /* linear-gradiente(GRADOS,COLOR1, COLOR2); */
     background: linear-gradient(90deg, hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 50%);
+    transition: all 0.2s ease-in;
 
+}
+
+.hero__button:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, hsl(198, 60%, 50%) 0%, hsl(176, 68%, 64%) 50%);
+    transform: scale(1.1);
+    transform: rotate(2deg);
 }
 
 .features {
     background-color: hsl(218, 28%, 13%);
     display: grid;
-    grid-template-columns: 340px 340px;
+    grid-template-columns: 340px;
     gap: 5rem;
     justify-content: center;
 
 
+}
+
+/* MEDIA QUERY: Se aplica a pantallas pequeñas (celulares y tablets) */
+
+@media(min-width: 1200px) {
+    .features {
+        grid-template-columns: 340px 340px;
+    }
 }
 
 .feature {
