@@ -15,7 +15,6 @@ font-family: "Open Sans", sans-serif;
 
 * {
     /* Selector Universal */
-
     margin: 0;
     box-sizing: border-box;
 
@@ -51,10 +50,7 @@ img {
 
 .wrapper {
     width: 1000px;
-
     width: min(100% - 3rem, 1000px);
-
-
     /* TODO:Adaptar el ancho de la pagina a dispositivos moviles*/
 }
 
@@ -69,16 +65,11 @@ img {
     /* 0 auto 0 auto*/
     margin: 0 auto;
     margin-top: 3rem;
-
-
-
 }
 
 .header__nav {
     display: flex;
     gap: 42px;
-
-
 }
 
 .hero {
@@ -180,7 +171,6 @@ img {
 
 
 .collaboration {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,17 +178,29 @@ img {
     padding-top: 8rem;
 }
 
+/* TODO: Usar media query para adaptar la seccion de colaboracion a pantallas moviles, tablets y desktops */
+
+
+@media(max-width: 768px) {
+    .collaboration {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
 .how_works {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 480px;
+    width: min(100% - 3rem, 720px);
 }
 
 .how_works__title {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 2.8rem;
+    width: min(100% - 3rem, 720px);
 
 }
 
